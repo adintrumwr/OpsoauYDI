@@ -23,7 +23,6 @@
     "author": "Rohan Vazarkar <rvazarkr@gmail.com> (https://blog.cptjesus.com)",
     "contributors": [
         "Andy Robbins <robbins.andy@gmail.com> (https://www.wald0.com)",
-        "Will Schroeder <will@harmj0y.net> (https://www.harmj0y.net)",
         "Ryan Hausknecht (https://hausec.com/)"
     ],
     "main": "main.js",
@@ -42,7 +41,6 @@
         "package:win32": "run-s \"package -- --platform=win32 --arch=all --icon=src/img/icon.ico\"",
         "build:win32": "run-s compile package:win32",
         "build:linux": "run-s compile package:linux",
-        "build:macos": "run-s compile package:macos",
         "build": "sh -c 'if [ \"$(run-s env:os)\" == \"win32\" ]; then run-s compile \"package -- --icon=src/img/icon.ico ${*}\"; else run-s compile \"package -- --icon=src/img/icon.icns ${*}\" ; fi' --",
         "env:os": "node -e \"console.log(process.platform)\""
     },
